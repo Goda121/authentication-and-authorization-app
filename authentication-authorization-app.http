@@ -1,0 +1,23 @@
+@authentication_authorization_app_HostAddress = http://localhost:5065
+
+### Login Endpoint
+POST {{authentication_authorization_app_HostAddress}}/api/Auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "testpassword"
+}
+
+### Admin Endpoint
+GET {{authentication_authorization_app_HostAddress}}/api/Auth/admin
+Authorization: Bearer <your_token_here>
+
+### User Endpoint
+GET {{authentication_authorization_app_HostAddress}}/api/Auth/user
+Authorization: Bearer <your_token_here>
+
+GET {{authentication_authorization_app_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
